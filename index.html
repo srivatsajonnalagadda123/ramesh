@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* * 1. Basic Reset and Mobile-First Viewport
+    */
+    body {
+        /* Set a max-width for very large screens if needed, otherwise fluid */
+        max-width: 100%;
+        margin: 0 auto; 
+        padding: 20px;
+        box-sizing: border-box; /* Includes padding/border in element's total width/height */
+        font-family: Arial, sans-serif;
+        text-align: center; /* Center the block elements (titles and anchor tags) */
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+    
+    /* * 2. Shared styles for all buttons (Adjusted for mobile)
+    */
+    .base-button {
+        /* Set font-size using viewport width for better scaling */
+        font-size: 5vw; /* Font size scales with viewport width (e.g., 5% of screen width) */
+        background-color: #ff0000; /* Red */
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px; /* Slightly more rounded corners */
+        border: none;
+        cursor: pointer;
+        display: block; /* Make buttons take full width for better tapping on mobile */
+        width: 90%; /* Take up most of the screen width */
+        margin: 15px auto; /* Center the button and provide vertical spacing */
+        box-sizing: border-box;
+    }
+
+    /* * 3. Specific style for the large button (btn-large) - ADJUSTED FOR MOBILE
+    */
+    .btn-large {
+        /* Use vertical padding for height, ensuring tap target is large */
+        padding: 30px 10px; /* Large padding for easy tapping */
+        
+        /* Remove fixed width and height constraints */
+        width: 90%; /* Overrides the base-button width if it was set differently, ensures consistency */
+        height: auto; 
+        line-height: normal; /* Let the browser handle line height naturally */
+    }
+
+    /*
+    * 4. Media Query for Larger Screens (Tablets/Desktops)
+    * This reverses the mobile-first approach and makes the buttons smaller on desktop.
+    */
+    @media (min-width: 768px) {
+        .base-button {
+            font-size: 30px; /* Fixed font size for desktop */
+            width: 450px; /* Restore desktop width */
+            display: inline-block; /* Center using margin auto */
+            margin: 20px 10px; /* Adjust spacing */
+        }
+
+        .btn-large {
+            padding: 20px 60px; /* Reduced vertical padding, increased horizontal */
+            line-height: 20px; /* Restore original line-height for better text alignment */
+        }
+    }
+    
+    /* UNUSED CLASS - KEPT FOR COMPLETENESS, ADJUSTED FOR MOBILE */
+    .btn-standard {
+        padding: 10px 20px;
+    }
+</style>
+</head>
+<body>
+
+    <h1 style="text-align:center;">Ramesh Babu - RB Chowdary</h1>
+    <h2 style="text-align:center;">Playlists</h2>
+
+    <a href="indefinite.html" class="base-button btn-large">
+        Indefinite Integrals
+    </a>
+
+    <a href="main26.html" class="base-button btn-large">
+        JEE Main Revision-2026
+    </a>
+
+</body>
+</html>
